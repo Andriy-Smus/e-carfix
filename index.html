@@ -11,17 +11,26 @@
 <body>
     <header>
         <div class="container">
-            <div class="header_wrapper">
-                <div class="header_logo">
-                    <a href=" https://andriy-smus.github.io/e-carfix/" class="custom-logo-link" rel="home" aria-current="page">E-CARFIX</a>
+            <div class="header__wrapper">
+                <div class="burger">
+                    <div class="burger__menu"></div>
                 </div>
-                <nav class="header_nav">
+                <div class="header__logo">
+                    <a href=" https://andriy-smus.github.io/e-carfix/" class="header__logo-link" rel="home" aria-current="page"><span itemprop="name">E-CARFIX</span></a>
+                </div>
+                <nav class="header__nav">
                     <ul class="menu">
-                        <li class="menu_item"><a class="item">Про нас</a></li>
-                        <li class="menu_item"><a class="item">Перелік послуг</a></li>
-                        <li class="menu_item"><a class="item">Фотогалерея</a></li>
-                        <li class="menu_item"><a class="item">Контакти</a></li>
+                        <li class="menu__item"><a class="menu__link" itemprop="url">Про нас</a></li>
+                        <li class="menu__item"><a class="menu__link" itemprop="url">Перелік послуг</a></li>
+                        <li class="menu__item"><a class="menu__link" itemprop="url">Фотогалерея</a></li>
+                        <li class="menu__item"><a class="menu__link" itemprop="url">Контакти</a></li>
                     </ul>
+                    <div class="header__phones">
+                        <img class="header__phones-icon" src="images/phone.svg" alt="icon" loading="lazy">
+                        <div class="header__phones-group">
+                          <a href="tel:+380962790008" itemprop="telephone" class="header__phone">+38 (096) 279-00-08</a>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
