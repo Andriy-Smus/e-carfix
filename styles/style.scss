@@ -153,7 +153,7 @@ header {
                         position: relative;
                         padding: 31.5px 16px;
                         text-align: center;
-                        font-size: 14px;
+                        font-size: 18px;
                         cursor: pointer;
                         -webkit-transition: .3s;
                         -o-transition: .3s;
@@ -198,8 +198,11 @@ header {
                     -webkit-box-align: center;
                     -ms-flex-align: center;
                     align-items: center;
+                    min-width: 210px;
                     .header__phones-icon {
                         margin-right: 16px;
+                        height: 28px;
+                        width: 28px;
                     }
                     .header__phones-group {
                         display: -webkit-box;
@@ -212,6 +215,41 @@ header {
                         font-size: 20px;
                     }
                 }
+                .header__contact-info {
+                    margin-left: 0;
+                    display: none;
+                    .contacts__item {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 34px;
+                        max-width: 300px;
+                        .contacts__item-icon {
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            margin-right: 15px;
+                            width: 28px;
+                            height: 28px;
+                            img {
+                                width: 28px;
+                                height: 28px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -220,13 +258,42 @@ header {
 
 
 
-
+@media (max-width: 1240px) {
+    header .container .header__wrapper .header__nav {
+        .menu .menu__item {
+            font-size: 16px;
+            padding: 31.5px 10px;
+        }
+        .menu .menu__item:not(:last-child) {
+            margin-right: 5px;
+        }
+        .header__phones .header__phones-group {
+            font-size: 18px;
+        }
+    } 
+}
 
 @media (max-width: 1024px) {
     header .container {
         padding: 0 5vw;
         .header__wrapper {
             height: clamp(60px, 5vw + 20px, 80px);
+            .header__logo {
+                margin-right: 25px;
+            }
+            .header__nav {
+                .menu .menu__item {
+                    font-size: 14px;
+                    padding: 31.5px 4px;
+                    margin-right: 15px;
+                }
+                .header__phones .header__phones-icon {
+                    margin-right: 5px;
+                }
+                .header__phones .header__phones-group {
+                    font-size: 14px;
+                }
+            } 
         }
     }
 }
@@ -299,6 +366,20 @@ header {
                 }
                 .header__phones {
                     margin-top: 20px;
+                    margin-left: 20px;
+                    .header__phones-icon {
+                        margin-right: 15px;
+                    }
+                    .header__phones-group {
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 34px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .header__contact-info {
+                    margin-left: 20px;
+                    display: block;
                 }
             }
             .header__nav.show {
@@ -315,5 +396,17 @@ header {
             }
         }
     }
+}
+
+
+@media (max-width: 395px) {
+    header .container .header__wrapper .header__nav {
+        .header__phones .header__phones-group {
+            font-size: 20px;
+        }
+        .header__contact-info .contacts__item {
+            font-size: 20px;
+        }
+    } 
 }
 
