@@ -200,6 +200,7 @@ header .container .header__wrapper .header__nav .header__contact-info .contacts_
   bottom: 0;
   background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.61) 45%, rgba(0, 0, 0, 0.0957633053) 100%);
   z-index: 2;
+  pointer-events: none;
 }
 .main__top swiper-container {
   width: 100%;
