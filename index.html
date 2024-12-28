@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-CARFIX</title>
   <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -71,13 +72,63 @@
 
   <main>
     <section id="main__top" class="main__top">
-      <div class="main__top-gradient"></div>
-      <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
-        space-between="0" centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false">
-        <swiper-slide><img src="images/w-motors-lykan-hypersport (1).jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="images/1209683eb86dc33939f9df2aab3afe28.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="images/e0615acf4f92729c380933e11ff157f7 (1).jpg" alt=""></swiper-slide>
-      </swiper-container>
+      <!-- <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+        space-between="0" centered-slides="true" autoplay-delay="5000" autoplay="false" autoplay-disable-on-interaction="false" loop="true"> -->
+      <div class="mySwiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="slide__image">
+                <img src="images/w-motors-lykan-hypersport (1).jpg" alt="">
+              </div>
+              <div class="slide__info">
+                <h1 class="slide__info-title">
+                  Комплексна <br> перевірка за пів ціни
+                </h1>
+                <h3 class="slide__info-descr">
+                  Перевірка всієї електроніки авто за 50% вартості до кінця тижня!
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="slide__image">
+                <img src="images/1209683eb86dc33939f9df2aab3afe28.jpg" alt="">
+              </div>
+              <div class="slide__info">
+                <h1 class="slide__info-title">
+                  Знижка для <br> нових клієнтів
+                </h1>
+                <h3 class="slide__info-descr">
+                  Ваша перша послуга – знижка 30% на ремонт електрики авто!
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="slide__image">
+                <img src="images/e0615acf4f92729c380933e11ff157f7 (1).jpg" alt="">
+              </div>
+              <div class="slide__info">
+                <h1 class="slide__info-title">
+                  Унікальна пропозиція
+                </h1>
+                <h3 class="slide__info-descr">
+                  Тільки в E-CARFIX отримуйте швидку діагностику автомобіля без попереднього запису!
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>        
+      <div class="main__button-container">
+        <button class="main__button"><a href="">Записатися</a></button>
+      </div>
     </section>
   </main>
 
@@ -87,8 +138,11 @@
         </div>
     </footer> -->
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  
+  
 </body>
 
 </html>
