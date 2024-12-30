@@ -25,5 +25,14 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  loop: "true",
+  loop: true,
+});
+
+const swiperContainer = document.querySelector('.mySwiper');
+swiperContainer.addEventListener('mouseenter', () => {
+  swiper.autoplay.stop(); // Зупиняє автопрокрутку
+});
+
+swiperContainer.addEventListener('mouseleave', () => {
+  swiper.autoplay.start(); // Відновлює автопрокрутку
 });
