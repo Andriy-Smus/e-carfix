@@ -36,3 +36,30 @@ swiperContainer.addEventListener('mouseenter', () => {
 swiperContainer.addEventListener('mouseleave', () => {
   swiper.autoplay.start(); // Відновлює автопрокрутку
 });
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  sendForm(event);
+});
+
+function sendForm(event) {
+  console.log('dfghj')
+  event.preventDefault(); // Зупиняємо стандартне відправлення форми
+
+  const form = document.getElementById('contact-form');
+  const formData = new FormData(form);
+
+  fetch('send_email.php', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(response => response.text())
+    .then(result => {
+      alert('Повідомлення надіслано!');
+      form.reset(); // Очищаємо форму
+    })
+    .catch(error => {
+      console.error('Помилка:', error);
+      alert('Сталася помилка при відправленні.');
+    });
+}

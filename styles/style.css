@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", serif;
   font-weight: 400;
@@ -332,6 +336,7 @@ header .container .header__wrapper .header__nav .header__contact-info .contacts_
   max-width: 260px;
   margin-right: 50px;
   margin-bottom: 50px;
+  align-items: center;
 }
 .advantages .container .advantages__content .advantages__item svg {
   width: 60px;
@@ -354,6 +359,111 @@ header .container .header__wrapper .header__nav .header__contact-info .contacts_
   font-weight: 600;
   font-size: 25px;
   line-height: 130%;
+}
+
+.feedback {
+  background-color: #141414;
+}
+.feedback .container {
+  max-width: 1368px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+.feedback .container form .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+.feedback .container form .form-wrapper .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.feedback .container form .form-wrapper .form-top {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.feedback .container form .form-wrapper .form-top .form-input {
+  width: 100%;
+  background: #494949;
+  border-radius: 10px;
+  height: 70px;
+  outline: 0;
+  border: none;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #141414;
+  padding: 0 12px;
+  transition: all 0.2s;
+}
+.feedback .container form .form-wrapper .form-top .form-input::-moz-placeholder {
+  color: #e7e7e7;
+}
+.feedback .container form .form-wrapper .form-top .form-input::placeholder {
+  color: #e7e7e7;
+}
+.feedback .container form .form-wrapper .form-top .form-input:focus {
+  background: #e7e7e7;
+  border: 1.5px solid #65ad35;
+  box-shadow: none;
+}
+.feedback .container form .form-wrapper textarea {
+  width: 100%;
+  background: #494949;
+  border-radius: 10px;
+  outline: 0;
+  border: none;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #141414;
+  padding: 0 12px;
+  transition: all 0.2s;
+  height: 100%;
+  resize: none;
+  padding: 15px;
+}
+.feedback .container form .form-wrapper textarea::-moz-placeholder {
+  color: #e7e7e7;
+}
+.feedback .container form .form-wrapper textarea::placeholder {
+  color: #e7e7e7;
+}
+.feedback .container form .form-wrapper textarea:focus {
+  background: #e7e7e7;
+  border: 1.5px solid #65ad35;
+  box-shadow: none;
+}
+.feedback .container form .form-btn {
+  display: block;
+  background: linear-gradient(360deg, #386d14 0, #8cf943 100%);
+  border-radius: 10px;
+  width: 30%;
+  margin: 20px auto;
+  height: 70px;
+  font-family: Montserrat;
+  border: none;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 130%;
+  color: #141414;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.feedback .container form .form-btn:hover {
+  box-shadow: 0 0 15px #65ad35 !important;
 }
 
 @media (max-width: 1240px) {
@@ -393,8 +503,17 @@ header .container .header__wrapper .header__nav .header__contact-info .contacts_
     margin-top: clamp(60px, 5vw + 20px, 80px);
     padding: 0;
   }
+  .feedback .container form .form-wrapper {
+    width: 80%;
+  }
+  .feedback .container form .form-btn {
+    width: 40%;
+  }
 }
 @media (max-width: 767px) {
+  header .container {
+    padding: 0 4%;
+  }
   header .container .header__wrapper {
     justify-content: flex-start;
   }
@@ -496,6 +615,38 @@ header .container .header__wrapper .header__nav .header__contact-info .contacts_
   .main__top .main__button-container .main__button {
     height: 60px;
   }
+  .advantages .container {
+    padding: 0 4%;
+  }
+  .advantages .container .advantages__title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .advantages .container .advantages__content {
+    margin-left: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  .advantages .container .advantages__content .advantages__item {
+    margin-right: 10px;
+  }
+  .advantages .container .advantages__invitation {
+    padding-bottom: 40px;
+  }
+  .advantages .container .advantages__invitation p {
+    text-align: left;
+    font-size: 22px;
+  }
+  .feedback .container {
+    padding: 0 4%;
+  }
+  .feedback .container form .form-wrapper {
+    width: 90%;
+  }
+  .feedback .container form .form-btn {
+    width: 60%;
+    height: 60px;
+  }
 }
 @media (max-width: 575px) {
   .main__top .swiper .swiper-slide .slide .slide__info {
@@ -512,6 +663,25 @@ header .container .header__wrapper .header__nav .header__contact-info .contacts_
     width: 70%;
   }
   .main__top .main__button-container .main__button {
+    font-size: 22px;
+  }
+  .advantages .container .advantages__content .advantages__item {
+    max-width: 100%;
+  }
+  .advantages .container .advantages__content .advantages__item p {
+    max-width: 70%;
+  }
+  .advantages .container .advantages__content .advantages__item br {
+    display: none;
+  }
+  .feedback .container form .form-wrapper {
+    width: 100%;
+  }
+  .feedback .container form .form-wrapper .form-top {
+    flex-direction: column;
+  }
+  .feedback .container form .form-btn {
+    width: 70%;
     font-size: 22px;
   }
 }
