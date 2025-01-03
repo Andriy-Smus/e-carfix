@@ -42,11 +42,21 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   sendForm(event);
 });
 
-function sendForm(event) {
-  console.log('dfghj')
-  event.preventDefault(); // Зупиняємо стандартне відправлення форми
+function validatePhone(phone) {
+  const phonePattern = /^(\+380|0)\d{9}$/; // Перевіряє номери у форматах +380XXXXXXXXX або 0XXXXXXXXX
+  return phonePattern.test(phone);
+}
 
+function sendForm(event) {
+  event.preventDefault();
   const form = document.getElementById('contact-form');
+  const phoneInput = document.getElementById('phone').value.trim();
+
+  if (!validatePhone(phoneInput)) {
+    alert('Будь ласка, введіть правильний номер телефону (у форматі +380XXXXXXXXX або 0XXXXXXXXX).');
+    return;
+  }
+  
   const formData = new FormData(form);
 
   fetch('send_email.php', {
@@ -55,11 +65,12 @@ function sendForm(event) {
   })
     .then(response => response.text())
     .then(result => {
-      alert('Повідомлення надіслано!');
-      form.reset(); // Очищаємо форму
+      alert('Ваше повідомлення успішно надіслано. Ми зв’яжемося з вами найближчим часом!');
+      form.reset();
     })
     .catch(error => {
       console.error('Помилка:', error);
       alert('Сталася помилка при відправленні.');
     });
 }
+
