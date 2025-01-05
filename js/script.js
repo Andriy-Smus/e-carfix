@@ -2,11 +2,20 @@ const burger = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger__menu');
 const nav = document.querySelector('.header__nav');
 
-// Додаємо слухач події на клік
 burger.addEventListener('click', () => {
-    // Додаємо або видаляємо клас 'show' при кліку
     burgerMenu.classList.toggle('show');
     nav.classList.toggle('show');
+});
+
+const menuLinks = document.querySelectorAll('.menu__link');
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+          if (burgerMenu.classList.contains('show')) {
+            burgerMenu.classList.remove('show');
+            nav.classList.remove('show');
+        }
+    });
 });
 
 
@@ -73,4 +82,26 @@ function sendForm(event) {
       alert('Сталася помилка при відправленні.');
     });
 }
+
+document.querySelectorAll('.menu__link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    if (this.hasAttribute('href') && this.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId); 
+
+      if (targetElement) {
+        const offset = 59;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+});
+
 
