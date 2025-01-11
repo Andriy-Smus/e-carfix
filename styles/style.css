@@ -204,6 +204,7 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-shrink: 0;
 }
 .main__top .swiper .swiper-slide .slide {
   width: 100%;

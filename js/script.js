@@ -29,7 +29,7 @@ menuLinks.forEach(link => {
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   spaceBetween: 30,
-  centeredSlides: true,
+  centeredSlides: false,
   autoplay: {
     delay: 5000,
     disableOnInteraction: true,
@@ -45,6 +45,11 @@ var swiper = new Swiper(".mySwiper", {
   touchRatio: 1,
   resistance: true,
   resistanceRatio: 0.85,
+  threshold: 20, 
+  watchSlidesProgress: true,
+  longSwipes: true, 
+  longSwipesRatio: 0.5,
+  speed: 500, 
   slideToClickedSlide: true,
 });
 
