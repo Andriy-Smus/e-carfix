@@ -7,6 +7,13 @@ burger.addEventListener('click', () => {
     nav.classList.toggle('show');
 });
 
+burger.setAttribute('aria-expanded', 'false');
+
+burger.addEventListener('click', () => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+    burger.setAttribute('aria-expanded', !expanded);
+});
+
 const menuLinks = document.querySelectorAll('.menu__link');
 
 menuLinks.forEach(link => {
@@ -24,7 +31,7 @@ var swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
   },
   pagination: {
     el: ".swiper-pagination",
@@ -35,6 +42,7 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   loop: true,
+  a11y: true,
 });
 
 const swiperContainer = document.querySelector('.mySwiper');
