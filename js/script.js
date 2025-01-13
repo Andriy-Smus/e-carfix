@@ -2,6 +2,8 @@ const burger = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger__menu');
 const nav = document.querySelector('.header__nav');
 
+document.getElementById('year').textContent = new Date().getFullYear();
+
 burger.addEventListener('click', () => {
     burgerMenu.classList.toggle('show');
     nav.classList.toggle('show');
@@ -42,15 +44,6 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // touchRatio: 1,
-  // resistance: true,
-  // resistanceRatio: 0.85,
-  // threshold: 20, 
-  // watchSlidesProgress: true,
-  // longSwipes: true, 
-  // longSwipesRatio: 0.5,
-  // speed: 500, 
-  // slideToClickedSlide: true,
 });
 
 
