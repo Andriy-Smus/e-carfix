@@ -235,13 +235,13 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
 }
 .main__top .swiper .swiper-slide .slide .slide__info {
   position: absolute;
-  top: 18%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%);
   z-index: 2;
   text-align: center;
   padding: 20px;
-  width: 70%;
+  width: 50%;
 }
 .main__top .swiper .swiper-slide .slide .slide__info .slide__info-title {
   font-weight: 700;
@@ -274,12 +274,12 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
 }
 .main__top .main__button-container {
   position: absolute;
-  bottom: 25%;
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
   text-align: center;
-  width: 40%;
+  width: 30%;
 }
 .main__top .main__button-container .main__button {
   background: linear-gradient(360deg, #386d14 0, #8cf943 100%);
@@ -534,6 +534,44 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   padding: 0 64px;
 }
 
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1568px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+  header .header__wrapper {
+    height: 100px;
+  }
+  header .header__wrapper .header__logo {
+    font-size: 40px;
+  }
+  header .header__wrapper .header__nav .menu .menu__item {
+    font-size: 24px;
+  }
+  header .header__wrapper .header__nav .header__phones .header__phones-icon {
+    width: 38px;
+    height: 38px;
+  }
+  header .header__wrapper .header__nav .header__phones .header__phones-group {
+    font-size: 26px;
+  }
+  .main__top {
+    margin-top: 100px;
+  }
+  .main__top .swiper .swiper-slide .slide {
+    height: 1000px;
+  }
+  .main__top .swiper .swiper-slide .slide .slide__info {
+    top: 22%;
+  }
+  .main__top .swiper .swiper-slide .slide .slide__info .slide__info-title {
+    font-size: 35px;
+  }
+  .main__top .swiper .swiper-slide .slide .slide__info .slide__info-descr {
+    font-size: 30px;
+  }
+}
 @media (max-width: 1240px) {
   header .header__wrapper .header__nav .menu .menu__item {
     font-size: 16px;
