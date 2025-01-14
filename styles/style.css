@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 400;
   font-size: 15px;
   background-color: #141414;
@@ -340,9 +340,6 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   line-height: 130%;
   max-width: 240px;
 }
-.advantages .advantages__invitation {
-  padding-bottom: 80px;
-}
 .advantages .advantages__invitation p {
   text-align: center;
   color: #65ad35;
@@ -351,8 +348,64 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   line-height: 130%;
 }
 
+.about__us {
+  background-color: #141414;
+  padding-top: 40px;
+}
+.about__us .about__us-title {
+  text-align: center;
+  color: #65ad35;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  margin-bottom: 40px;
+}
+.about__us .about__us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.about__us .about__us-content .about__us-upper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.about__us .about__us-content .about__us-upper .about__us-logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.about__us .about__us-content .about__us-upper .about__us-logo img {
+  max-width: 180px;
+  height: auto;
+}
+.about__us .about__us-content .about__us-upper .about__us-line {
+  width: 2px;
+  height: 80px;
+  background-color: #65ad35;
+}
+.about__us .about__us-content .about__us-upper .about__us-short-text {
+  flex: 1;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: left;
+  line-height: 24px;
+}
+.about__us .about__us-content .about__us-long-text {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 700px;
+  letter-spacing: 1px;
+}
+
 .feedback {
   background-color: #141414;
+  margin-top: 40px;
 }
 .feedback form .form-wrapper {
   display: flex;
@@ -500,6 +553,7 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   line-height: 37px;
   margin-bottom: 32px;
   margin-left: 0;
+  margin-top: 5px;
 }
 .footer .footer__contacts .contacts__map {
   width: 60%;
@@ -572,13 +626,17 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
     padding-top: 80px;
   }
   .advantages .advantages__title {
-    font-size: 55px;
+    font-size: 60px;
   }
   .advantages .advantages__content {
     grid-template-columns: repeat(auto-fill, minmax(361px, 1fr));
   }
   .advantages .advantages__content .advantages__item {
-    max-width: 420px;
+    max-width: 440px;
+  }
+  .advantages .advantages__content .advantages__item svg {
+    width: 80px;
+    height: 80px;
   }
   .advantages .advantages__content .advantages__item p {
     font-size: 26px;
@@ -586,6 +644,26 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   }
   .advantages .advantages__invitation p {
     font-size: 35px;
+  }
+  .about__us {
+    padding-top: 80px;
+  }
+  .about__us .about__us-title {
+    font-size: 60px;
+  }
+  .about__us .about__us-content .about__us-upper .about__us-logo img {
+    max-width: 300px;
+  }
+  .about__us .about__us-content .about__us-upper .about__us-line {
+    height: 120px;
+  }
+  .about__us .about__us-content .about__us-upper .about__us-short-text {
+    font-size: 26px;
+    line-height: 33px;
+  }
+  .about__us .about__us-content .about__us-long-text {
+    max-width: 1000px;
+    font-size: 28px;
   }
   .feedback form .form-wrapper .form-top .form-input {
     height: 90px;
@@ -644,6 +722,9 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   header .header__wrapper .header__logo {
     width: 120px;
   }
+  header .header__wrapper .header__logo a {
+    width: 120px;
+  }
   header .header__wrapper .header__nav .menu .menu__item {
     font-size: 14px;
     margin-right: 15px;
@@ -697,6 +778,9 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
     align-items: center;
     height: 100%;
     background-color: #141414;
+  }
+  header .header__wrapper .header__logo a {
+    margin-top: 10px;
   }
   header .header__wrapper .header__nav {
     position: fixed;
@@ -785,7 +869,6 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   .advantages .advantages__title {
     font-size: 25px;
     margin-bottom: 20px;
-    text-align: left;
   }
   .advantages .advantages__content {
     margin-left: 25px;
@@ -800,6 +883,21 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   .advantages .advantages__invitation p {
     text-align: left;
     font-size: 22px;
+  }
+  .about__us .about__us-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .about__us .about__us-content .about__us-upper {
+    gap: 20px;
+  }
+  .about__us .about__us-content .about__us-upper .about__us-logo img {
+    max-width: 140px;
+  }
+  .about__us .about__us-content .about__us-upper .about__us-short-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
   }
   .feedback form .form-wrapper {
     width: 90%;
@@ -882,7 +980,6 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   .footer .footer__contacts .contacts__list .contacts__item.company-sub {
     line-height: 25px;
     font-size: 22px;
-    margin-top: 0;
     margin-bottom: 30px;
   }
   .footer .footer__contacts .contacts__map {
@@ -914,6 +1011,15 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   .main__top .main__button-container .main__button {
     height: 50px;
     font-size: 16px;
+  }
+  .about__us .about__us-content .about__us-upper .about__us-logo img {
+    max-width: 120px;
+  }
+  .about__us .about__us-content .about__us-upper .about__us-short-text {
+    font-size: 12px;
+  }
+  .about__us .about__us-content .about__us-long-text {
+    font-size: 18px;
   }
   .footer .footer__contacts .contacts__list {
     padding-left: 30px;

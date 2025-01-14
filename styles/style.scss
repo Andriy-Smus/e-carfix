@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: "Montserrat", serif;
+    font-family: "Inter", serif;
     font-weight: 400;
     font-size: 15px;
     background-color: #141414;
@@ -410,7 +410,6 @@ header {
         }
     }
     .advantages__invitation {
-        padding-bottom: 80px;
         p {
             text-align: center;
             color: #65ad35;
@@ -421,8 +420,64 @@ header {
     }
 }
 
+.about__us {
+    background-color: #141414;
+    padding-top: 40px;
+    .about__us-title {
+        text-align: center;
+        color: #65ad35;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 40px;
+    }
+    .about__us-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .about__us-upper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;   
+            .about__us-logo {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                img {
+                  max-width: 180px;
+                  height: auto;
+                }
+            }
+            .about__us-line {
+                width: 2px;
+                height: 80px;
+                background-color: #65ad35; 
+            }
+            .about__us-short-text {
+                flex: 1;
+                color: #ffffff;
+                font-weight: 500;
+                font-size: 18px;
+                text-align: left;
+                line-height: 24px;
+            }
+        } 
+        .about__us-long-text {
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+            max-width: 700px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
 .feedback {
     background-color: #141414;
+    margin-top: 40px;
     form {
         .form-wrapper {
             display: flex;
@@ -585,6 +640,7 @@ header {
                 line-height: 37px;
                 margin-bottom: 32px;
                 margin-left: 0;
+                margin-top: 5px;
             }
         }
         .contacts__map {
@@ -626,6 +682,7 @@ header {
         margin: 0 auto;
         padding: 0 64px;
     }
+
     header .header__wrapper {
         height: 100px;
         .header__logo {
@@ -642,6 +699,7 @@ header {
             font-size: 26px;
         }
     }
+
     .main__top {
         margin-top: 100px;
         .swiper .swiper-slide .slide {
@@ -665,12 +723,16 @@ header {
     .advantages {
         padding-top: 80px;
         .advantages__title {
-            font-size: 55px;
+            font-size: 60px;
         }
         .advantages__content {
             grid-template-columns: repeat(auto-fill, minmax(361px, 1fr));
             .advantages__item {
-                max-width: 420px;
+                max-width: 440px;
+                svg {
+                    width: 80px;
+                    height: 80px;
+                }
                 p {
                     font-size: 26px;
                     max-width: 340px;
@@ -681,6 +743,31 @@ header {
             font-size: 35px;
         }
     } 
+
+    .about__us {
+        padding-top: 80px;
+        .about__us-title {
+            font-size: 60px;
+        }
+        .about__us-content {
+            .about__us-upper {
+                .about__us-logo img {
+                    max-width: 300px;
+                }
+                .about__us-line {
+                    height: 120px;
+                }
+                .about__us-short-text {
+                    font-size: 26px;
+                    line-height: 33px;
+                }
+            } 
+            .about__us-long-text {
+                max-width: 1000px;
+                font-size: 28px;
+            }
+        }
+    }
 
     .feedback form {
         .form-wrapper {
@@ -748,6 +835,9 @@ header {
         height: clamp(60px, 5vw + 20px, 80px);
         .header__logo {
             width: 120px;
+            a {
+                width: 120px;
+            }
         }
         .header__nav {
             .menu .menu__item {
@@ -811,6 +901,9 @@ header {
             align-items: center;
             height: 100%;
             background-color: #141414;
+            a {
+                margin-top: 10px;
+            }
         }
         .header__nav {
             position: fixed;
@@ -917,11 +1010,11 @@ header {
             }
         }
     }
+
     .advantages {
         .advantages__title {
             font-size: 25px;
             margin-bottom: 20px;
-            text-align: left;
         }
         .advantages__content {
             margin-left: 25px;
@@ -938,6 +1031,25 @@ header {
             }
         }
     }
+
+    .about__us {
+        .about__us-title {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .about__us-content .about__us-upper {
+            gap: 20px;
+            .about__us-logo img {
+                max-width: 140px;
+            }
+            .about__us-short-text {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+        } 
+    } 
+
     .feedback form {
         .form-wrapper {
             width: 90%;
@@ -1029,7 +1141,6 @@ header {
             .contacts__item.company-sub {
                 line-height: 25px;
                 font-size: 22px;
-                margin-top: 0;
                 margin-bottom: 30px;
             }
         }
@@ -1065,6 +1176,21 @@ header {
             font-size: 16px;
         }
     }
+
+    .about__us .about__us-content {
+        .about__us-upper {
+            .about__us-logo img {
+                max-width: 120px;
+            }
+            .about__us-short-text {
+                font-size: 12px;
+            }
+        }
+        .about__us-long-text {
+            font-size: 18px;
+        }
+    } 
+
     .footer {
         .footer__contacts {
             .contacts__list {
