@@ -93,7 +93,7 @@ function sendForm(event) {
     });
 }
 
-document.querySelectorAll('.menu__link').forEach(link => {
+document.querySelectorAll('.link-block').forEach(link => {
   link.addEventListener('click', function (e) {
     if (this.hasAttribute('href') && this.getAttribute('href').startsWith('#')) {
       e.preventDefault();
