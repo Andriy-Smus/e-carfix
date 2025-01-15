@@ -986,9 +986,6 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   .advantages .advantages__content .advantages__item {
     margin-right: 10px;
   }
-  .advantages .advantages__invitation {
-    padding-bottom: 40px;
-  }
   .advantages .advantages__invitation p {
     text-align: left;
     font-size: 22px;
@@ -1007,6 +1004,9 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+  }
+  .services {
+    padding-top: 40px;
   }
   .services .services__title {
     font-size: 25px;
