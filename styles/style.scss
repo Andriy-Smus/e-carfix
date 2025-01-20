@@ -810,7 +810,7 @@ header {
             } 
             .about__us-long-text {
                 max-width: 1000px;
-                font-size: 28px;
+                font-size: 24px;
             }
         }
         .advantages__title {
@@ -1284,10 +1284,15 @@ header {
 @media (max-width: 395px) {
     header .header__wrapper .header__nav {
         .header__phones .header__phones-group {
-            font-size: 20px;
+            font-size: 19px;
+            line-height: 27px;
+            font-weight: 400;
         }
         .header__contact-info .contacts__item {
-            font-size: 20px;
+            font-size: 19px;
+            line-height: 27px;
+            font-weight: 400;
+            max-width: 340px;
         }
     } 
 
