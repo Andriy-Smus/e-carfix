@@ -212,41 +212,6 @@ header {
                     font-size: 17px;
                 }
             }
-            .header__contact-info {
-                margin-left: 0;
-                display: none;
-                .contacts__item {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-align: center;
-                    -ms-flex-align: center;
-                    align-items: center;
-                    margin-bottom: 10px;
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 34px;
-                    max-width: 300px;
-                    .contacts__item-icon {
-                        display: -webkit-box;
-                        display: -ms-flexbox;
-                        display: flex;
-                        -webkit-box-align: center;
-                        -ms-flex-align: center;
-                        align-items: center;
-                        -webkit-box-pack: center;
-                        -ms-flex-pack: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                        width: 28px;
-                        height: 28px;
-                        img {
-                            width: 28px;
-                            height: 28px;
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -359,14 +324,10 @@ header {
             -webkit-transition: all .2s;
             -o-transition: all .2s;
             transition: all .2s;
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                text-transform: uppercase;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
         }
         .main__button:hover {
             box-shadow: 0 0 15px $primary-color !important;
@@ -1043,21 +1004,7 @@ header {
                 }
             }
             .header__phones {
-                margin-top: 20px;
-                margin-left: 20px;
-                .header__phones-icon {
-                    margin-right: 15px;
-                }
-                .header__phones-group {
-                    font-size: 24px;
-                    font-weight: 500;
-                    line-height: 34px;
-                    margin-bottom: 10px;
-                }
-            }
-            .header__contact-info {
-                margin-left: 20px;
-                // display: block;
+                display: none;
             }
         }
         .header__nav.show {
@@ -1271,20 +1218,6 @@ header {
 }
 
 @media (max-width: 395px) {
-    header .header__wrapper .header__nav {
-        .header__phones .header__phones-group {
-            font-size: 19px;
-            line-height: 27px;
-            font-weight: 400;
-        }
-        .header__contact-info .contacts__item {
-            font-size: 19px;
-            line-height: 27px;
-            font-weight: 400;
-            max-width: 340px;
-        }
-    } 
-
     .main__top {
         .swiper .swiper-slide {
             .slide__image {
@@ -1339,5 +1272,12 @@ header {
         .footer__bottom .footer__wrapper {
             padding: 10px;
         }
+    }
+}
+
+@media (max-width: 350px) {
+    .main__top .swiper .swiper-slide .slide__image .img-merc {
+        -o-object-position: 37% 100%;
+        object-position: 37% 100%;
     }
 }
