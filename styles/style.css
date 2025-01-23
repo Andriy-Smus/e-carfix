@@ -351,17 +351,6 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   height: auto;
   transition: box-shadow 0.3s ease;
 }
-.about__us .about__us-content .about__us-upper .about__us-logo img:hover {
-  animation: blink-shadow 0.1s infinite;
-}
-@keyframes blink-shadow {
-  0%, 100% {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.249);
-  }
-  50% {
-    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
-  }
-}
 .about__us .about__us-content .about__us-upper .about__us-line {
   width: 2px;
   height: 80px;
@@ -929,7 +918,6 @@ header .header__wrapper .header__nav .header__contact-info .contacts__item .cont
   }
   header .header__wrapper .header__nav .header__contact-info {
     margin-left: 20px;
-    display: block;
   }
   header .header__wrapper .header__nav.show {
     height: 100vh;
