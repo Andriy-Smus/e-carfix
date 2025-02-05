@@ -30,7 +30,7 @@ menuLinks.forEach(link => {
 
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  spaceBetween: 30,
+  spaceBetween: 0,
   centeredSlides: false,
   autoplay: {
     delay: 5000,
