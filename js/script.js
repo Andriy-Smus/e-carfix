@@ -1,15 +1,19 @@
 const burger = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger__menu');
 const nav = document.querySelector('.header__nav');
+const swiperContainer = document.querySelector('.mySwiper');
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
 burger.addEventListener('click', () => {
     burgerMenu.classList.toggle('show');
     nav.classList.toggle('show');
+
+    const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+    burger.setAttribute('aria-expanded', !expanded);
 });
 
-burger.setAttribute('aria-expanded', 'false');
+// burger.setAttribute('aria-expanded', 'false');
 
 burger.addEventListener('click', () => {
     const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
@@ -17,44 +21,65 @@ burger.addEventListener('click', () => {
 });
 
 const menuLinks = document.querySelectorAll('.menu__link');
+const arrows = document.querySelectorAll('.arrow'); // Стрілки
 
 menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-          if (burgerMenu.classList.contains('show')) {
-            burgerMenu.classList.remove('show');
-            nav.classList.remove('show');
-        }
-    });
+  link.addEventListener('click', (event) => {
+    // Якщо клік не на стрілку, закриваємо меню
+    if (!event.target.classList.contains('arrow')) {
+      if (burgerMenu.classList.contains('show')) {
+        burgerMenu.classList.remove('show');
+        nav.classList.remove('show');
+      }
+    }
+  });
+});
+
+arrows.forEach(arrow => {
+  arrow.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation(); // Запобігає закриттю меню
+
+    const submenuPhone = document.querySelector('.submenu-phone'); // Отримуємо submenu-phone
+
+    if (submenuPhone) {
+      // Перемикаємо display між "block" і "none"
+      submenuPhone.style.display = submenuPhone.style.display === 'block' ? 'none' : 'block';
+    }
+  });
 });
 
 
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  spaceBetween: 0,
-  centeredSlides: false,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
 
 
-const swiperContainer = document.querySelector('.mySwiper');
-swiperContainer.addEventListener('mouseenter', () => {
-  swiper.autoplay.stop(); // Зупиняє автопрокрутку
-});
+if (swiperContainer) {
+  var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 0,
+      centeredSlides: false,
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+  });
 
-swiperContainer.addEventListener('mouseleave', () => {
-  swiper.autoplay.start(); // Відновлює автопрокрутку
-});
+  // Зупинка та відновлення автопрокрутки при наведенні
+  swiperContainer.addEventListener('mouseenter', () => {
+      swiper.autoplay.stop(); // Зупиняє автопрокрутку
+  });
+
+  swiperContainer.addEventListener('mouseleave', () => {
+      swiper.autoplay.start(); // Відновлює автопрокрутку
+  });
+}
 
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -114,4 +139,18 @@ document.querySelectorAll('.link-block').forEach(link => {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll(".submenu a, .submenu-phone a"); // Об'єднуємо обидва селектори
+  const currentPage = window.location.pathname; // Отримуємо URL поточної сторінки
+
+  menuItems.forEach((item) => {
+    const itemHref = item.getAttribute("href");
+
+    // Перевіряємо, чи шлях в href збігається з поточним шляхом
+    if (currentPage.endsWith(itemHref)) {
+      item.classList.add("active"); // Додаємо клас до самого елемента <a>
+    }
+  });
+});
 
