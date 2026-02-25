@@ -13,7 +13,6 @@ try {
     $mail->Host = 'smtp.gmail.com'; 
     $mail->SMTPAuth = true;
     $mail->Username = 'ecarfix.ua@gmail.com'; 
-    // $mail->Password = 'qosy eykx lplk vfix';
     $mail->Password = 'd j m o t c d u m z p r n g z s';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
